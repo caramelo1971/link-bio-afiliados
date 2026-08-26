@@ -52,7 +52,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen bg-orange-50/30">
+    <main className="min-h-screen" style={{ background: 'linear-gradient(160deg, #fff7ed 0%, #eff6ff 100%)' }}>
       <header className="w-full bg-gradient-to-r from-orange-500 via-orange-400 to-blue-600 py-5 px-4 mb-6 flex flex-col items-center justify-center gap-1 shadow-lg">
         <span className="text-white font-black text-2xl sm:text-3xl tracking-tight drop-shadow-md">
           🛒 NL Caramelo Shop
