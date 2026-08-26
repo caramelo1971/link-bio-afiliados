@@ -25,8 +25,8 @@ export default function FilterBar({ categorias, plataformas, onFilter }: FilterB
   }
 
   const pillBase = 'px-3 py-1.5 rounded-full text-sm font-medium border transition cursor-pointer'
-  const pillActive = 'bg-gray-900 text-white border-gray-900'
-  const pillInactive = 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+  const pillActive = 'bg-gradient-to-r from-orange-500 to-blue-500 text-white border-transparent'
+  const pillInactive = 'bg-white text-gray-600 border-gray-200 hover:border-orange-300'
 
   return (
     <div className="mb-6 space-y-3">

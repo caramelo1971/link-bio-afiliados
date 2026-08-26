@@ -54,11 +54,15 @@ export default function HomePage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-8">
-      <header className="text-center mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Produtos Recomendados</h1>
-        <p className="text-gray-500 mt-1">Selecionados com carinho para você</p>
+    <main className="min-h-screen bg-orange-50/30">
+      <header className="w-full mb-6">
+        <img
+          src="/banner.png"
+          alt="NL Caramelo Shop"
+          className="w-full object-cover max-h-48 sm:max-h-64"
+        />
       </header>
+      <div className="max-w-2xl mx-auto px-4 pb-8">
 
       {destaque && <FeaturedProduct produto={destaque} />}
 
@@ -77,6 +81,7 @@ export default function HomePage() {
       ) : (
         <p className="text-center text-gray-400 py-12">Nenhum produto encontrado.</p>
       )}
+      </div>
     </main>
   )
 }

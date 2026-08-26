@@ -41,7 +41,7 @@ export default function ProductCard({ produto }: ProductCardProps) {
           href={produto.link_afiliado}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="mt-auto pt-3 block text-center bg-gray-900 text-white text-sm font-medium py-2.5 rounded-xl hover:bg-gray-700 transition"
+          className="mt-auto pt-3 block text-center bg-orange-500 text-white text-sm font-medium py-2.5 rounded-xl hover:bg-orange-600 transition"
         >
           Comprar agora →
         </a>

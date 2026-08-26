@@ -24,7 +24,7 @@ export default function FeaturedProduct({ produto }: FeaturedProductProps) {
           priority
         />
         {produto.destaque && (
-          <div className="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
+          <div className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             ★ Destaque
           </div>
         )}
@@ -45,7 +45,7 @@ export default function FeaturedProduct({ produto }: FeaturedProductProps) {
           href={produto.link_afiliado}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="mt-4 block text-center bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-gray-700 transition text-base"
+          className="mt-4 block text-center bg-gradient-to-r from-orange-500 to-blue-500 text-white font-semibold py-3 rounded-xl hover:opacity-90 transition text-base"
         >
           Comprar agora →
         </a>
