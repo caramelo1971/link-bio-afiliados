@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { Produto } from '@/lib/types'
-import FeaturedProduct from '@/components/FeaturedProduct'
+import ProductCarousel from '@/components/ProductCarousel'
 import ProductCard from '@/components/ProductCard'
 import FilterBar from '@/components/FilterBar'
 
@@ -35,8 +35,6 @@ export default function HomePage() {
     setFiltrados(resultado)
   }
 
-  const destaque = filtrados.find(p => p.destaque) ?? filtrados[0] ?? null
-  const grade = filtrados.filter(p => p.id !== destaque?.id)
   const categorias = [...new Set(produtos.map(p => p.categoria))]
   const plataformas = [...new Set(produtos.map(p => p.plataforma))]
 
@@ -65,7 +63,7 @@ export default function HomePage() {
       </header>
       <div className="max-w-2xl mx-auto px-4 pb-8">
 
-      {destaque && <FeaturedProduct produto={destaque} />}
+      <ProductCarousel produtos={filtrados} />
 
       <FilterBar
         categorias={categorias}
@@ -73,9 +71,9 @@ export default function HomePage() {
         onFilter={handleFilter}
       />
 
-      {grade.length > 0 ? (
+      {filtrados.length > 0 ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {grade.map(produto => (
+          {filtrados.map(produto => (
             <ProductCard key={produto.id} produto={produto} />
           ))}
         </div>
