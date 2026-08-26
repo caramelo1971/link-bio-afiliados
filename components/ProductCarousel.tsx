@@ -18,7 +18,7 @@ export default function ProductCarousel({ produtos }: { produtos: Produto[] }) {
   const produto = produtos[current]
 
   return (
-    <div className="rounded-2xl overflow-hidden shadow-md mb-6 bg-gradient-to-br from-orange-50 to-blue-50">
+    <div className="rounded-2xl overflow-hidden shadow-md mb-6" style={{ background: 'linear-gradient(135deg, #fed7aa 0%, #bfdbfe 100%)' }}>
       <div className="relative w-full pt-[65%]">
         <Image
           src={produto.imagem_url}
