@@ -14,7 +14,7 @@ const badgeColors: Record<string, string> = {
 export default function ProductCard({ produto }: ProductCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
-      <div className="relative w-full pt-[100%] bg-gray-50">
+      <div className="relative w-full pt-[100%] bg-gradient-to-br from-orange-50 to-blue-50">
         <Image
           src={produto.imagem_url}
           alt={produto.nome}
