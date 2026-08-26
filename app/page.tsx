@@ -59,7 +59,7 @@ export default function HomePage() {
         <img
           src="/banner.png"
           alt="NL Caramelo Shop"
-          className="w-full object-cover max-h-48 sm:max-h-64"
+          className="w-full object-contain"
         />
       </header>
       <div className="max-w-2xl mx-auto px-4 pb-8">
