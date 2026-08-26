@@ -55,12 +55,13 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-orange-50/30">
-      <header className="w-full mb-6">
-        <img
-          src="/banner.png"
-          alt="NL Caramelo Shop"
-          className="w-full object-contain"
-        />
+      <header className="w-full bg-gradient-to-r from-orange-500 via-orange-400 to-blue-600 py-5 px-4 mb-6 flex flex-col items-center justify-center gap-1 shadow-lg">
+        <span className="text-white font-black text-2xl sm:text-3xl tracking-tight drop-shadow-md">
+          🛒 NL Caramelo Shop
+        </span>
+        <span className="text-orange-100 text-xs sm:text-sm font-medium tracking-wide">
+          Qualidade · Confiança · Preço Justo
+        </span>
       </header>
       <div className="max-w-2xl mx-auto px-4 pb-8">
 
