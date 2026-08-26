@@ -14,12 +14,12 @@ const badgeColors: Record<string, string> = {
 export default function ProductCard({ produto }: ProductCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
-      <div className="relative w-full pt-[100%]" style={{ background: 'linear-gradient(135deg, #fed7aa 0%, #bfdbfe 100%)' }}>
+      <div className="relative w-full pt-[100%] bg-gray-50">
         <Image
           src={produto.imagem_url}
           alt={produto.nome}
           fill
-          className="object-contain p-2 mix-blend-multiply"
+          className="object-contain p-2"
           sizes="(max-width: 768px) 50vw, 33vw"
         />
       </div>
