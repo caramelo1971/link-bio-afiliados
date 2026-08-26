@@ -24,7 +24,7 @@ export default function ProductCarousel({ produtos }: { produtos: Produto[] }) {
           src={produto.imagem_url}
           alt={produto.nome}
           fill
-          className="object-contain p-4"
+          className="object-contain p-4 mix-blend-multiply"
           sizes="100vw"
           priority
         />

@@ -19,7 +19,7 @@ export default function ProductCard({ produto }: ProductCardProps) {
           src={produto.imagem_url}
           alt={produto.nome}
           fill
-          className="object-contain p-2"
+          className="object-contain p-2 mix-blend-multiply"
           sizes="(max-width: 768px) 50vw, 33vw"
         />
       </div>
