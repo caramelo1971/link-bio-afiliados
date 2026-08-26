@@ -33,9 +33,9 @@ export default function ProductCarousel({ produtos }: { produtos: Produto[] }) {
             ★ Destaque
           </div>
         )}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pt-8 pb-3">
-          <p className="text-white font-bold text-base line-clamp-1">{produto.nome}</p>
-          <p className="text-orange-300 font-extrabold text-lg">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/90 to-transparent px-4 pt-8 pb-3">
+          <p className="text-gray-900 font-bold text-base line-clamp-1">{produto.nome}</p>
+          <p className="text-orange-600 font-extrabold text-lg">
             {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.preco)}
           </p>
         </div>
