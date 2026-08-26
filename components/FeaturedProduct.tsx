@@ -23,9 +23,11 @@ export default function FeaturedProduct({ produto }: FeaturedProductProps) {
           sizes="100vw"
           priority
         />
-        <div className="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
-          ★ Destaque
-        </div>
+        {produto.destaque && (
+          <div className="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">
+            ★ Destaque
+          </div>
+        )}
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-3 mb-2">

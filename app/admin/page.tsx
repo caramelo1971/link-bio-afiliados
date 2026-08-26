@@ -12,10 +12,15 @@ export default function AdminPage() {
   const supabase = createClient()
 
   async function fetchProdutos() {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from('produtos')
       .select('*')
       .order('criado_em', { ascending: false })
+    if (error) {
+      console.error('Erro ao carregar produtos:', error.message)
+      setLoading(false)
+      return
+    }
     if (data) setProdutos(data)
     setLoading(false)
   }
@@ -24,7 +29,11 @@ export default function AdminPage() {
 
   async function deletar(id: string) {
     if (!confirm('Confirmar exclusão?')) return
-    await supabase.from('produtos').delete().eq('id', id)
+    const { error } = await supabase.from('produtos').delete().eq('id', id)
+    if (error) {
+      alert('Erro ao excluir: ' + error.message)
+      return
+    }
     fetchProdutos()
   }
 
