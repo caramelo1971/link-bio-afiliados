@@ -53,7 +53,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen relative" style={{ background: 'linear-gradient(160deg, #fff7ed 0%, #eff6ff 100%)' }}>
-      <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'url(/banner.png)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.08 }} />
+      <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'url(/banner.png)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15 }} />
       <header className="w-full bg-gradient-to-r from-orange-500 via-orange-400 to-blue-600 py-5 px-4 mb-6 flex flex-col items-center justify-center gap-1 shadow-lg">
         <span className="text-white font-black text-2xl sm:text-3xl tracking-tight drop-shadow-md">
           🛒 NL Caramelo Shop
