@@ -14,18 +14,18 @@ const badgeColors: Record<string, string> = {
 export default function ProductCard({ produto }: ProductCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
-      <div className="relative w-full pt-[100%]">
+      <div className="relative w-full pt-[100%] bg-gray-50">
         <Image
           src={produto.imagem_url}
           alt={produto.nome}
           fill
-          className="object-cover"
+          className="object-contain p-2"
           sizes="(max-width: 768px) 50vw, 33vw"
         />
       </div>
-      <div className="p-4 flex flex-col flex-1">
+      <div className="p-3 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-2">
-          <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 flex-1">
+          <h3 className="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-2 flex-1">
             {produto.nome}
           </h3>
           <span className={`shrink-0 text-xs font-medium px-2 py-0.5 rounded-full capitalize ${badgeColors[produto.plataforma]}`}>

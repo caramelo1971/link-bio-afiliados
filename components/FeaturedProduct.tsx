@@ -14,12 +14,12 @@ const badgeColors: Record<string, string> = {
 export default function FeaturedProduct({ produto }: FeaturedProductProps) {
   return (
     <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden mb-8">
-      <div className="relative w-full pt-[60%] sm:pt-[40%]">
+      <div className="relative w-full pt-[50%] sm:pt-[35%] bg-gray-50">
         <Image
           src={produto.imagem_url}
           alt={produto.nome}
           fill
-          className="object-cover"
+          className="object-contain p-3"
           sizes="100vw"
           priority
         />
