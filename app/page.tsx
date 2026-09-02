@@ -53,7 +53,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen relative" style={{ background: 'linear-gradient(160deg, #fff7ed 0%, #eff6ff 100%)' }}>
-      <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'url(/banner.png)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.15, zIndex: 0 }} />
+      <div className="fixed inset-0 pointer-events-none" style={{ backgroundImage: 'url(/banner.png)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.06, zIndex: 0 }} />
       <div className="relative" style={{ zIndex: 1 }}>
       <header className="w-full bg-gradient-to-r from-orange-500 via-orange-400 to-blue-600 py-5 px-4 mb-6 flex flex-col items-center justify-center gap-1 shadow-lg">
         <span className="text-white font-black text-2xl sm:text-3xl tracking-tight drop-shadow-md">
@@ -74,10 +74,12 @@ export default function HomePage() {
       />
 
       {filtrados.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {filtrados.map(produto => (
-            <ProductCard key={produto.id} produto={produto} />
-          ))}
+        <div className="rounded-2xl p-4" style={{ background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(4px)' }}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {filtrados.map(produto => (
+              <ProductCard key={produto.id} produto={produto} />
+            ))}
+          </div>
         </div>
       ) : (
         <p className="text-center text-gray-400 py-12">Nenhum produto encontrado.</p>
